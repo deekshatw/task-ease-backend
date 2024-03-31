@@ -54,8 +54,8 @@ const StartServer = () => {
   router.get("/", (req, res, next) => {
     return res.status(200).json({ message: "Welcome to TaskEase Server:)" });
   });
-  router.use("/user", userRoutes);
-  router.use("/task", taskRoutes);
+  router.use("/api/user", userRoutes);
+  router.use("/api/task", taskRoutes);
 
   // Step 4: Healthcheck
   router.get("/api/healthcheck", (req, res, next) => {
