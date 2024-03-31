@@ -41,6 +41,9 @@ const StartServer = () => {
         next();
     });
     //   Step 3: Defining routes for the application
+    router.get("/", (req, res, next) => {
+        return res.status(200).json({ message: "Welcome to TaskEase Server:)" });
+    });
     router.use("/user", UserRoute_1.default);
     router.use("/task", TasksRoute_1.default);
     // Step 4: Healthcheck
